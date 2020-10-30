@@ -1,4 +1,32 @@
 <div>
   <h1>MY TUTORIAL</h1>
-  <P>My tutorials today is {{tutorial}}</P>
+  <ul>
+    <li *ngFor="let tutorial of tutorial">
+      <h2 (click)="tutorialClicked (tutorial)"><b> {{tutorial.title}}</b></h2>
+      <img src="{{tutorial.image_url}}" alt="image">
+      <p>Description: {{tutorial.description}}</p>
+  
+      <a href="{{tutorial.link}}">View site</a>
+      <p>Content: {{tutorial.content}}</p>
+      <p>Published: {{tutorial.published}}</p>
+      <p>Created on: {{tutorial.date_created}}</p> 
+      <p>Updated on: {{tutorial.date_updated}}</p> 
+
+    </li>
+  </ul>
 </div>
+
+<hr>
+
+Title <input type="text" [(ngModel)]="selectedTutorial.title" /><br>
+Image <input type="text" [(ngModel)]="selectedTutorial.image" /><br>
+Description <input type="text" [(ngModel)]="selectedTutorial.description" /><br>
+Content <input type="text" [(ngModel)]="selectedTutorial.content" /><br>
+Link <input type="text" [(ngModel)]="selectedTutorial.link" /><br>
+Published <input type="text" [(ngModel)]="selectedTutorial.published" /><br>
+date created <input type="text" [(ngModel)]="selectedTutorial.date_created" /><br>
+Date updated<input type="text" [(ngModel)]=" selectedTutorial.date_updated" /><br>
+
+<button (click)="updateTutorial()">PUT</button>
+<button (click)="createTutorial()">POST</button>
+<button (click)="deleteTutorial()">DELETE</button>
