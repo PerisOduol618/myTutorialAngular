@@ -1,7 +1,4 @@
-<!-- <form class="form-inline my-2 my-lg-0 ml-auto">
-  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
-</form> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +9,10 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+  <nav class="navbar navbar-expand-lg unique-color-dark ">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand text-white" href="#" style="font-family: 'Henny Penny', cursive;"><b>Tuorial</b></a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -26,33 +23,6 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
 
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-
-      </ul>
-      <!-- Links -->
 
       <form class="form-inline">
         <div class="md-form my-0">
@@ -64,91 +34,107 @@
     <!-- Collapsible content -->`
 
   </nav>
+  <div class="jumbotron bg-info">
+    <h1 class="text-center" style="font-size: 70px; font-family: 'Henny Penny', cursive;"><b>Tutorials</b> </h1><br><br>
 
-
-
-
-
-
-
-
-
-  <section class="form-dark">
-
-    
-    <div class="card card-image"
-      style="background-image: url('https://images.unsplash.com/photo-1494059980473-813e73ee784b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'); width: 28rem;">
-      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
-
-     
-        <div class="text-center">
-          <h3 class="white-text mb-5 mt-4 font-weight-bold"><strong>ADD</strong> <a
-              class="green-text font-weight-bold"><strong> TUTORIAL</strong></a></h3>
-        </div>
-
-        Title <input type="text" class="form-control" [(ngModel)]="selectedTutorial.title" /><br>
-        Image <input type="text" class="form-control"[(ngModel)]="selectedTutorial.image" /><br>
-        Description <input type="text"class="form-control" [(ngModel)]="selectedTutorial.description" /><br>
-        Content <input type="text" class="form-control"[(ngModel)]="selectedTutorial.content" /><br>
-        Link <input type="text" class="form-control" [(ngModel)]="selectedTutorial.link" /><br>
-        Published<input class="form-control" [(ngModel)]="selectedTutorial.published" /><br>
-
-        date created <input type="text" class="form-control" [(ngModel)]="selectedTutorial.date_created" /><br>
-        Date updated<input type="text" class="form-control" [(ngModel)]=" selectedTutorial.date_updated" /><br>
-      
-        <button class="btn btn-danger" (click)="updateTutorial()">PUT</button>
-        <button (click)="createTutorial()">POST</button>
-        <button (click)="deleteTutorial()">DELETE</button>
-        <button type="button" class="btn btn-primary btn-rounded">Primary</button>
-
-
-
-
-
-  
-
-      </div>
-    </div>
-
-
-  </section>
-
-
-
-
-
-  <div>
-    <h1>MY TUTORIAL</h1>
-    <ul>
-      <li *ngFor="let tutorial of tutorial">
-        <h2 (click)="tutorialClicked (tutorial)"><b> {{tutorial.title}}</b></h2>
-        <img src="{{tutorial.image_url}}" alt="image">
-        <p>Description: {{tutorial.description}}</p>
-
-        <a href="{{tutorial.link}}">View site</a>
-        <p>Content: {{tutorial.content}}</p>
-        <p>Published: {{tutorial.published}}</p>
-        <p>Created on: {{tutorial.date_created}}</p>
-        <p>Updated on: {{tutorial.date_updated}}</p>
-
-      </li>
-    </ul>
+    <p class="text-center text-white" style="font-size: 30px;"><b> This is a website where you can add different tutorials and their links</b></p>
   </div>
 
-  <hr>
+
+  <div class="container">
+    <div class=" row">
+      <div class="col-md-6">
+
+        <div class="col-md-6">
+          <div class="card">
+
+            <!-- Card image -->
+            <div class="view overlay">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body">
+
+              <!-- Title -->
+              <h4 class="card-title">Card title</h4>
+              <!-- Text -->
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <!-- Button -->
+              <a href="#" class="btn btn-primary">Button</a>
+
+            </div>
+
+          </div>
+        </div>
+        <!-- Card -->
+
+<br><br>
+
+        <div *ngFor="let tutorial of tutorial">
+          <div class="card container">
+            <h2 (click)="tutorialClicked (tutorial)"><b> {{tutorial.title}}</b></h2>
 
 
-  <!-- <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-  <label class="custom-control-label" for="defaultUnchecked"> </label>
-</div> -->
-  <!-- date created <input type="text" [(ngModel)]="selectedTutorial.date_created" /><br>
-  Date updated<input type="text" [(ngModel)]=" selectedTutorial.date_updated" /><br>
+            <img src="{{tutorial.image_url}}" alt="image">
+            <p>Description: {{tutorial.description}}</p>
 
-  <button class="btn btn-danger" (click)="updateTutorial()">PUT</button>
-  <button (click)="createTutorial()">POST</button>
-  <button (click)="deleteTutorial()">DELETE</button> -->
+            <a href="{{tutorial.link}}">View site</a>
+            <p>Content: {{tutorial.content}}</p>
+            <p>Published: {{tutorial.published}}</p>
+            <p>Created on: {{tutorial.date_created}}</p>
+            <p>Updated on: {{tutorial.date_updated}}</p>
 
+          </div>
+
+        </div>
+
+      </div>
+
+     <br><br>
+     
+      <div class="col-md-6">
+
+        <section class="form-dark">
+
+
+          <div class="card card-image"
+            style="background-image: url('https://images.unsplash.com/photo-1494059980473-813e73ee784b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'); width: 28rem;">
+            <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+
+
+              <div class="text-center">
+                <h3 style="font-family: 'Henny Penny', cursive;" class="white-text mb-5 mt-4 font-weight-bold"><strong>ADD</strong> <a
+                    class="blue-text font-weight-bold"><strong> TUTORIAL</strong></a></h3>
+              </div>
+
+              Title <input type="text" class="form-control" [(ngModel)]="selectedTutorial.title" /><br>
+              Image <input type="text" class="form-control" [(ngModel)]="selectedTutorial.image" /><br>
+              Description <input type="text" class="form-control" [(ngModel)]="selectedTutorial.description" /><br>
+              Content <input type="text" class="form-control" [(ngModel)]="selectedTutorial.content" /><br>
+              Link <input type="text" class="form-control" [(ngModel)]="selectedTutorial.link" /><br>
+              Published<input class="form-control" placeholder="True/False" [(ngModel)]="selectedTutorial.published" />
+
+              <br><br>
+
+              date created <input type="text" class="form-control" [(ngModel)]="selectedTutorial.date_created" /><br>
+              Date updated<input type="text" class="form-control" [(ngModel)]=" selectedTutorial.date_updated" /><br>
+
+              <button class="btn btn-info" (click)="updateTutorial()">UPDATE</button>
+              <button class="btn btn-info" (click)="createTutorial()">POST</button>
+              <button class="btn btn-info" (click)="deleteTutorial()"><i class="fas fa-trash-alt"></i></button>
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 
 </body>
 
