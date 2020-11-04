@@ -25,9 +25,6 @@ export class AppComponent {
       data => {
         this.tutorial = data;
 
-       
-
-
       },
       error => {
         console.log(error)
